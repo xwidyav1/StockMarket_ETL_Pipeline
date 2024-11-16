@@ -8955,3 +8955,10 @@ sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate
 [2024-11-16T13:05:27.203+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:27.203+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2024-11-16T13:05:27.218+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:27.218+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sensor_decorator to None, run_after=None
 [2024-11-16T13:05:27.246+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_sensor_decorator.py took 0.086 seconds
+[2024-11-16T13:05:58.808+0000] {processor.py:186} INFO - Started process (PID=6408) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-11-16T13:05:58.810+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_sensor_decorator.py for tasks to queue
+[2024-11-16T13:05:58.813+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:58.813+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-11-16T13:05:58.823+0000] {processor.py:925} INFO - DAG(s) 'example_sensor_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-11-16T13:05:58.855+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:58.854+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:05:58.876+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:58.876+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sensor_decorator to None, run_after=None
+[2024-11-16T13:05:58.909+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_sensor_decorator.py took 0.108 seconds

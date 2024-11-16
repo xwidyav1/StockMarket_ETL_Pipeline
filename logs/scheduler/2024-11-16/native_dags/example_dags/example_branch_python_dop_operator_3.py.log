@@ -8771,3 +8771,10 @@ sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate
 [2024-11-16T13:05:25.935+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:25.935+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2024-11-16T13:05:25.967+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:25.966+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2024-11-16 13:04:00+00:00, run_after=2024-11-16 13:05:00+00:00
 [2024-11-16T13:05:25.993+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.101 seconds
+[2024-11-16T13:05:57.159+0000] {processor.py:186} INFO - Started process (PID=6397) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2024-11-16T13:05:57.161+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2024-11-16T13:05:57.165+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:57.165+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2024-11-16T13:05:57.176+0000] {processor.py:925} INFO - DAG(s) 'example_branch_dop_operator_v3' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2024-11-16T13:05:57.203+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:57.203+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:05:57.242+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:57.242+0000] {dag.py:4180} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2024-11-16 13:04:00+00:00, run_after=2024-11-16 13:05:00+00:00
+[2024-11-16T13:05:57.273+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.124 seconds
