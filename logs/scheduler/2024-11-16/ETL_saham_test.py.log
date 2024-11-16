@@ -8842,3 +8842,143 @@ sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate
 [2024-11-16T12:55:29.536+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:55:29.535+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2024-11-16T12:55:29.563+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:55:29.563+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
 [2024-11-16T12:55:29.593+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.710 seconds
+[2024-11-16T12:56:00.480+0000] {processor.py:186} INFO - Started process (PID=5068) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:56:00.482+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T12:56:00.486+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:56:00.485+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:56:01.187+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:56:01.212+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:56:01.211+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T12:56:01.243+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:56:01.243+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T12:56:01.276+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.806 seconds
+[2024-11-16T12:56:31.601+0000] {processor.py:186} INFO - Started process (PID=5136) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:56:31.603+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T12:56:31.609+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:56:31.608+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:56:32.616+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:56:32.650+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:56:32.649+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T12:56:32.699+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:56:32.699+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T12:56:32.740+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 1.158 seconds
+[2024-11-16T12:57:03.581+0000] {processor.py:186} INFO - Started process (PID=5204) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:57:03.583+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T12:57:03.586+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:57:03.586+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:57:04.200+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:57:04.228+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:57:04.227+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T12:57:04.266+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:57:04.265+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T12:57:04.302+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.727 seconds
+[2024-11-16T12:57:34.560+0000] {processor.py:186} INFO - Started process (PID=5272) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:57:34.561+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T12:57:34.565+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:57:34.564+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:57:35.165+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:57:35.195+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:57:35.194+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T12:57:35.225+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:57:35.224+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T12:57:35.254+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.701 seconds
+[2024-11-16T12:58:05.716+0000] {processor.py:186} INFO - Started process (PID=5340) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:58:05.718+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T12:58:05.721+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:58:05.721+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:58:06.317+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:58:06.342+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:58:06.342+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T12:58:06.372+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:58:06.372+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T12:58:06.398+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.688 seconds
+[2024-11-16T12:58:36.581+0000] {processor.py:186} INFO - Started process (PID=5408) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:58:36.583+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T12:58:36.586+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:58:36.586+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:58:37.178+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:58:37.205+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:58:37.204+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T12:58:37.235+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:58:37.235+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T12:58:37.265+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.691 seconds
+[2024-11-16T12:59:08.183+0000] {processor.py:186} INFO - Started process (PID=5476) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:59:08.184+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T12:59:08.189+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:59:08.188+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:59:08.787+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:59:08.820+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:59:08.815+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T12:59:08.851+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:59:08.851+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T12:59:08.880+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.704 seconds
+[2024-11-16T12:59:39.435+0000] {processor.py:186} INFO - Started process (PID=5544) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:59:39.436+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T12:59:39.439+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:59:39.439+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:59:39.843+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T12:59:39.875+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:59:39.875+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T12:59:39.909+0000] {logging_mixin.py:190} INFO - [2024-11-16T12:59:39.909+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T12:59:39.940+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.512 seconds
+[2024-11-16T13:00:10.610+0000] {processor.py:186} INFO - Started process (PID=5614) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:00:10.612+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:00:10.616+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:00:10.616+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:00:11.030+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:00:11.056+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:00:11.055+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:00:11.085+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:00:11.085+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:00:11.125+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.522 seconds
+[2024-11-16T13:00:41.255+0000] {processor.py:186} INFO - Started process (PID=5680) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:00:41.257+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:00:41.260+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:00:41.259+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:00:41.707+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:00:41.736+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:00:41.735+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:00:41.767+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:00:41.767+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:00:41.803+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.555 seconds
+[2024-11-16T13:01:13.215+0000] {processor.py:186} INFO - Started process (PID=5748) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:01:13.217+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:01:13.222+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:01:13.222+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:01:13.935+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:01:13.992+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:01:13.991+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:01:14.067+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:01:14.066+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:01:14.130+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.924 seconds
+[2024-11-16T13:01:44.760+0000] {processor.py:186} INFO - Started process (PID=5816) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:01:44.762+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:01:44.767+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:01:44.766+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:01:45.259+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:01:45.298+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:01:45.297+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:01:45.336+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:01:45.335+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:01:45.369+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.619 seconds
+[2024-11-16T13:02:16.183+0000] {processor.py:186} INFO - Started process (PID=5885) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:02:16.185+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:02:16.188+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:02:16.188+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:02:16.533+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:02:16.566+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:02:16.565+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:02:16.608+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:02:16.608+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:02:16.649+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.475 seconds
+[2024-11-16T13:02:46.899+0000] {processor.py:186} INFO - Started process (PID=5953) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:02:46.901+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:02:46.904+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:02:46.903+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:02:47.224+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:02:47.252+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:02:47.251+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:02:47.283+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:02:47.282+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:02:47.311+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.418 seconds
+[2024-11-16T13:03:17.646+0000] {processor.py:186} INFO - Started process (PID=6020) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:03:17.647+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:03:17.650+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:03:17.650+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:03:17.993+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:03:18.024+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:03:18.023+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:03:18.053+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:03:18.053+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:03:18.081+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.440 seconds
+[2024-11-16T13:03:48.167+0000] {processor.py:186} INFO - Started process (PID=6090) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:03:48.168+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:03:48.171+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:03:48.171+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:03:48.474+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:03:48.498+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:03:48.498+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:03:48.521+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:03:48.520+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:03:48.545+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.384 seconds
+[2024-11-16T13:04:18.817+0000] {processor.py:186} INFO - Started process (PID=6156) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:04:18.818+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:04:18.821+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:04:18.821+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:04:19.250+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:04:19.274+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:04:19.274+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:04:19.299+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:04:19.299+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:04:19.330+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.521 seconds
+[2024-11-16T13:04:49.484+0000] {processor.py:186} INFO - Started process (PID=6226) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:04:49.485+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:04:49.488+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:04:49.488+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:04:49.769+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:04:49.791+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:04:49.790+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:04:49.817+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:04:49.817+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:04:49.844+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.366 seconds
+[2024-11-16T13:05:19.978+0000] {processor.py:186} INFO - Started process (PID=6294) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:05:19.979+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:05:19.982+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:19.982+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:05:20.321+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:05:20.348+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:20.347+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:05:20.375+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:20.375+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:05:20.405+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.433 seconds
+[2024-11-16T13:05:51.008+0000] {processor.py:186} INFO - Started process (PID=6360) to work on /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:05:51.009+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/ETL_saham_test.py for tasks to queue
+[2024-11-16T13:05:51.013+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:51.012+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:05:51.381+0000] {processor.py:925} INFO - DAG(s) 'stock_sentiment_testinggg' retrieved from /opt/airflow/dags/ETL_saham_test.py
+[2024-11-16T13:05:51.408+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:51.407+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-11-16T13:05:51.437+0000] {logging_mixin.py:190} INFO - [2024-11-16T13:05:51.436+0000] {dag.py:4180} INFO - Setting next_dagrun for stock_sentiment_testinggg to 2024-11-11 00:00:00+00:00, run_after=2024-11-12 00:00:00+00:00
+[2024-11-16T13:05:51.465+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/ETL_saham_test.py took 0.465 seconds
