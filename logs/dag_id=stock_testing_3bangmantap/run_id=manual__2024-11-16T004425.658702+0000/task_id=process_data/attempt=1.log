@@ -1,0 +1,136 @@
+[2024-11-16T00:44:48.602+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-16T00:44:48.633+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stock_testing_3bangmantap.process_data manual__2024-11-16T00:44:25.658702+00:00 [queued]>
+[2024-11-16T00:44:48.650+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stock_testing_3bangmantap.process_data manual__2024-11-16T00:44:25.658702+00:00 [queued]>
+[2024-11-16T00:44:48.651+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-16T00:44:48.728+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_data> on 2024-11-16 00:44:25.658702+00:00
+[2024-11-16T00:44:48.741+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3868) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-16T00:44:48.743+0000] {standard_task_runner.py:72} INFO - Started process 3870 to run task
+[2024-11-16T00:44:48.744+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'stock_testing_3bangmantap', 'process_data', 'manual__2024-11-16T00:44:25.658702+00:00', '--job-id', '328', '--raw', '--subdir', 'DAGS_FOLDER/ETL_saham_test3.py', '--cfg-path', '/tmp/tmp3uum4wvz']
+[2024-11-16T00:44:48.746+0000] {standard_task_runner.py:105} INFO - Job 328: Subtask process_data
+[2024-11-16T00:44:48.812+0000] {task_command.py:467} INFO - Running <TaskInstance: stock_testing_3bangmantap.process_data manual__2024-11-16T00:44:25.658702+00:00 [running]> on host 50375b572a3b
+[2024-11-16T00:44:48.932+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stock_testing_3bangmantap' AIRFLOW_CTX_TASK_ID='process_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-16T00:44:25.658702+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-16T00:44:25.658702+00:00'
+[2024-11-16T00:44:48.934+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-16T00:44:48.935+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-16T00:44:48.936+0000] {logging_mixin.py:190} INFO - Current task name:process_data state:running start_date:2024-11-16 00:44:48.634942+00:00
+[2024-11-16T00:44:48.938+0000] {logging_mixin.py:190} INFO - Dag name:stock_testing_3bangmantap and current dag run status:running
+[2024-11-16T00:44:48.939+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-16T00:44:49.913+0000] {log.py:232} WARNING - [nltk_data] Downloading package vader_lexicon to
+[nltk_data]     /home/***/nltk_data...
+[2024-11-16T00:44:49.915+0000] {log.py:232} WARNING - [nltk_data]   Package vader_lexicon is already up-to-date!
+[2024-11-16T00:44:49.949+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test3.py", line 83, in process_data
+    df_stock, df_news_transformed, final_df = transform(df_stock, df_news)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test3.py", line 129, in transform
+    final_df = pd.merge(stock_df, news_df_transformed, on='date', how='inner')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 169, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 804, in __init__
+    self._maybe_coerce_merge_keys()
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1483, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[ns] and object columns for key 'date'. If you wish to proceed you should use pd.concat
+[2024-11-16T00:44:49.975+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-11-16T00:44:49.976+0000] {logging_mixin.py:190} INFO - Task start:2024-11-16 00:44:48.634942+00:00 end:2024-11-16 00:44:49.975242+00:00 duration:1.3403
+[2024-11-16T00:44:49.978+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): process_data> dag:<DAG: stock_testing_3bangmantap> dagrun:<DagRun stock_testing_3bangmantap @ 2024-11-16 00:44:25.658702+00:00: manual__2024-11-16T00:44:25.658702+00:00, state:running, queued_at: 2024-11-16 00:44:25.718281+00:00. externally triggered: True>
+[2024-11-16T00:44:49.979+0000] {logging_mixin.py:190} INFO - Failure caused by You are trying to merge on datetime64[ns] and object columns for key 'date'. If you wish to proceed you should use pd.concat
+[2024-11-16T00:44:49.979+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=stock_testing_3bangmantap, task_id=process_data, run_id=manual__2024-11-16T00:44:25.658702+00:00, execution_date=20241116T004425, start_date=20241116T004448, end_date=20241116T004449
+[2024-11-16T00:44:50.001+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-16T00:44:50.002+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 328 for task process_data (You are trying to merge on datetime64[ns] and object columns for key 'date'. If you wish to proceed you should use pd.concat; 3870)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test3.py", line 83, in process_data
+    df_stock, df_news_transformed, final_df = transform(df_stock, df_news)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test3.py", line 129, in transform
+    final_df = pd.merge(stock_df, news_df_transformed, on='date', how='inner')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 169, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 804, in __init__
+    self._maybe_coerce_merge_keys()
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1483, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on datetime64[ns] and object columns for key 'date'. If you wish to proceed you should use pd.concat
+[2024-11-16T00:44:50.046+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-16T00:44:50.078+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-16T00:44:50.082+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

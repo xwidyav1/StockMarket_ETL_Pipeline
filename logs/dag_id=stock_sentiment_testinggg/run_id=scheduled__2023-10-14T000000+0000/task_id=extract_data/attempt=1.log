@@ -1,0 +1,59 @@
+[2024-11-15T21:46:09.225+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-15T21:46:09.333+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stock_sentiment_testinggg.extract_data scheduled__2023-10-14T00:00:00+00:00 [queued]>
+[2024-11-15T21:46:09.460+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stock_sentiment_testinggg.extract_data scheduled__2023-10-14T00:00:00+00:00 [queued]>
+[2024-11-15T21:46:09.462+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-15T21:46:09.630+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extract_data> on 2023-10-14 00:00:00+00:00
+[2024-11-15T21:46:09.714+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=517) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-15T21:46:09.731+0000] {standard_task_runner.py:72} INFO - Started process 540 to run task
+[2024-11-15T21:46:09.729+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'stock_sentiment_testinggg', 'extract_data', 'scheduled__2023-10-14T00:00:00+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/ETL_saham_test.py', '--cfg-path', '/tmp/tmpkdzanwns']
+[2024-11-15T21:46:09.749+0000] {standard_task_runner.py:105} INFO - Job 48: Subtask extract_data
+[2024-11-15T21:46:10.044+0000] {task_command.py:467} INFO - Running <TaskInstance: stock_sentiment_testinggg.extract_data scheduled__2023-10-14T00:00:00+00:00 [running]> on host 50375b572a3b
+[2024-11-15T21:46:10.456+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stock_sentiment_testinggg' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-14T00:00:00+00:00'
+[2024-11-15T21:46:10.474+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-15T21:46:10.481+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-15T21:46:10.483+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2024-11-15 21:46:09.348240+00:00
+[2024-11-15T21:46:10.484+0000] {logging_mixin.py:190} INFO - Dag name:stock_sentiment_testinggg and current dag run status:running
+[2024-11-15T21:46:10.490+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-15T21:46:11.805+0000] {python.py:240} INFO - Done. Returned value was: ({'Information': 'Thank you for using Alpha Vantage! Our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.'}, {'status': 'error', 'code': 'apiKeyInvalid', 'message': 'Your API key is invalid or incorrect. Check your key, or go to https://newsapi.org to create a free API key.'})
+[2024-11-15T21:46:11.996+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-15T21:46:12.023+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=stock_sentiment_testinggg, task_id=extract_data, run_id=scheduled__2023-10-14T00:00:00+00:00, execution_date=20231014T000000, start_date=20241115T214609, end_date=20241115T214612
+[2024-11-15T21:46:12.324+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-15T21:46:12.334+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-15T21:46:12.350+0000] {logging_mixin.py:190} INFO - Dag name:stock_sentiment_testinggg queued_at:2024-11-15 21:45:47.651625+00:00
+[2024-11-15T21:46:12.353+0000] {logging_mixin.py:190} INFO - Task hostname:50375b572a3b operator:PythonOperator
+[2024-11-15T21:46:12.447+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-15T21:46:12.555+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-15T21:46:12.591+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-11-15T22:02:05.527+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-15T22:02:05.678+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stock_sentiment_testinggg.extract_data scheduled__2023-10-14T00:00:00+00:00 [queued]>
+[2024-11-15T22:02:05.752+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stock_sentiment_testinggg.extract_data scheduled__2023-10-14T00:00:00+00:00 [queued]>
+[2024-11-15T22:02:05.770+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-15T22:02:05.830+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extract_data> on 2023-10-14 00:00:00+00:00
+[2024-11-15T22:02:05.877+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1357) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-15T22:02:05.883+0000] {standard_task_runner.py:72} INFO - Started process 1421 to run task
+[2024-11-15T22:02:05.891+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'stock_sentiment_testinggg', 'extract_data', 'scheduled__2023-10-14T00:00:00+00:00', '--job-id', '221', '--raw', '--subdir', 'DAGS_FOLDER/ETL_saham_test.py', '--cfg-path', '/tmp/tmpx_azje00']
+[2024-11-15T22:02:05.901+0000] {standard_task_runner.py:105} INFO - Job 221: Subtask extract_data
+[2024-11-15T22:02:06.127+0000] {task_command.py:467} INFO - Running <TaskInstance: stock_sentiment_testinggg.extract_data scheduled__2023-10-14T00:00:00+00:00 [running]> on host 50375b572a3b
+[2024-11-15T22:02:06.603+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stock_sentiment_testinggg' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2023-10-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-14T00:00:00+00:00'
+[2024-11-15T22:02:06.614+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-15T22:02:06.615+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-15T22:02:06.629+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2024-11-15 22:02:05.699983+00:00
+[2024-11-15T22:02:06.632+0000] {logging_mixin.py:190} INFO - Dag name:stock_sentiment_testinggg and current dag run status:running
+[2024-11-15T22:02:06.642+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-15T22:02:06.652+0000] {logging_mixin.py:190} INFO - Alpha Vantage API Key: None
+[2024-11-15T22:02:06.653+0000] {logging_mixin.py:190} INFO - News API Key: None
+[2024-11-15T22:02:08.164+0000] {logging_mixin.py:190} INFO - Error fetching news data: {'status': 'error', 'code': 'apiKeyInvalid', 'message': 'Your API key is invalid or incorrect. Check your key, or go to https://newsapi.org to create a free API key.'}
+[2024-11-15T22:02:08.174+0000] {python.py:240} INFO - Done. Returned value was: (None, None)
+[2024-11-15T22:02:08.295+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-15T22:02:08.311+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=stock_sentiment_testinggg, task_id=extract_data, run_id=scheduled__2023-10-14T00:00:00+00:00, execution_date=20231014T000000, start_date=20241115T220205, end_date=20241115T220208
+[2024-11-15T22:02:08.414+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-15T22:02:08.417+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-15T22:02:08.424+0000] {logging_mixin.py:190} INFO - Dag name:stock_sentiment_testinggg queued_at:2024-11-15 22:01:39.617510+00:00
+[2024-11-15T22:02:08.426+0000] {logging_mixin.py:190} INFO - Task hostname:50375b572a3b operator:PythonOperator
+[2024-11-15T22:02:08.544+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-15T22:02:08.677+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-15T22:02:08.695+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

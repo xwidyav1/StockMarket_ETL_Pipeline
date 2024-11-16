@@ -1,0 +1,140 @@
+[2024-11-16T04:34:19.159+0000] {processor.py:186} INFO - Started process (PID=56331) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:34:19.161+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:34:19.163+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:34:19.162+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:34:19.215+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:34:19.206+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:34:19.277+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:34:19.305+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.152 seconds
+[2024-11-16T04:34:50.087+0000] {processor.py:186} INFO - Started process (PID=56400) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:34:50.089+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:34:50.092+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:34:50.091+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:34:50.144+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:34:50.138+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:34:50.147+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:34:50.174+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.096 seconds
+[2024-11-16T04:35:20.813+0000] {processor.py:186} INFO - Started process (PID=56469) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:35:20.814+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:35:20.816+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:35:20.815+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:35:20.852+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:35:20.845+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:35:20.855+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:35:20.880+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.073 seconds
+[2024-11-16T04:35:51.243+0000] {processor.py:186} INFO - Started process (PID=56538) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:35:51.245+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:35:51.250+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:35:51.248+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:35:51.353+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:35:51.338+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:35:51.358+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:35:51.413+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.205 seconds
+[2024-11-16T04:36:21.734+0000] {processor.py:186} INFO - Started process (PID=56606) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:36:21.736+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:36:21.738+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:36:21.738+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:36:21.792+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:36:21.784+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:36:21.796+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:36:21.845+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.125 seconds
+[2024-11-16T04:36:52.805+0000] {processor.py:186} INFO - Started process (PID=56675) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:36:52.806+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:36:52.809+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:36:52.809+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:36:52.849+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:36:52.843+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:36:52.852+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:36:52.878+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.081 seconds
+[2024-11-16T04:37:23.646+0000] {processor.py:186} INFO - Started process (PID=56743) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:37:23.648+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:37:23.650+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:37:23.649+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:37:23.690+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:37:23.682+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:37:23.692+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:37:23.719+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.081 seconds
+[2024-11-16T04:37:53.838+0000] {processor.py:186} INFO - Started process (PID=56812) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:37:53.839+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:37:53.841+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:37:53.841+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:37:53.879+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:37:53.873+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:37:53.882+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:37:53.907+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.074 seconds
+[2024-11-16T04:38:24.382+0000] {processor.py:186} INFO - Started process (PID=56879) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:38:24.384+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:38:24.387+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:38:24.386+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:38:24.437+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:38:24.428+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:38:24.441+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:38:24.472+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.097 seconds
+[2024-11-16T04:38:55.882+0000] {processor.py:186} INFO - Started process (PID=56948) to work on /opt/airflow/dags/model_dag.py
+[2024-11-16T04:38:55.884+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/model_dag.py for tasks to queue
+[2024-11-16T04:38:55.887+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:38:55.886+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:38:55.945+0000] {logging_mixin.py:190} INFO - [2024-11-16T04:38:55.933+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/model_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/model_dag.py", line 9, in <module>
+    from sklearn.linear_model import LinearRegression
+ModuleNotFoundError: No module named 'sklearn'
+[2024-11-16T04:38:55.949+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/model_dag.py
+[2024-11-16T04:38:55.989+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/model_dag.py took 0.119 seconds

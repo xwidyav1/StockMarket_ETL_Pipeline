@@ -1,0 +1,262 @@
+[2024-11-15T22:08:22.699+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-15T22:08:22.748+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stock_sentiment_testinggg.process_data scheduled__2024-11-14T00:00:00+00:00 [queued]>
+[2024-11-15T22:08:22.767+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stock_sentiment_testinggg.process_data scheduled__2024-11-14T00:00:00+00:00 [queued]>
+[2024-11-15T22:08:22.768+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-11-15T22:08:22.803+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_data> on 2024-11-14 00:00:00+00:00
+[2024-11-15T22:08:22.823+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1591) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-15T22:08:22.828+0000] {standard_task_runner.py:72} INFO - Started process 1596 to run task
+[2024-11-15T22:08:22.829+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'stock_sentiment_testinggg', 'process_data', 'scheduled__2024-11-14T00:00:00+00:00', '--job-id', '250', '--raw', '--subdir', 'DAGS_FOLDER/ETL_saham_test.py', '--cfg-path', '/tmp/tmpsl0yon6j']
+[2024-11-15T22:08:22.832+0000] {standard_task_runner.py:105} INFO - Job 250: Subtask process_data
+[2024-11-15T22:08:22.956+0000] {task_command.py:467} INFO - Running <TaskInstance: stock_sentiment_testinggg.process_data scheduled__2024-11-14T00:00:00+00:00 [running]> on host 50375b572a3b
+[2024-11-15T22:08:23.178+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stock_sentiment_testinggg' AIRFLOW_CTX_TASK_ID='process_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-14T00:00:00+00:00'
+[2024-11-15T22:08:23.182+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-15T22:08:23.183+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-15T22:08:23.184+0000] {logging_mixin.py:190} INFO - Current task name:process_data state:running start_date:2024-11-15 22:08:22.749259+00:00
+[2024-11-15T22:08:23.185+0000] {logging_mixin.py:190} INFO - Dag name:stock_sentiment_testinggg and current dag run status:running
+[2024-11-15T22:08:23.187+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-15T22:08:23.213+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test.py", line 68, in process_data
+    df_stock = process_stock_data(data_stock)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test.py", line 81, in process_stock_data
+    df_stock = pd.DataFrame.from_dict(data_stock['Time Series (Daily)'], orient='index')
+                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+[2024-11-15T22:08:23.245+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-11-15T22:08:23.246+0000] {logging_mixin.py:190} INFO - Task start:2024-11-15 22:08:22.749259+00:00 end:2024-11-15 22:08:23.243930+00:00 duration:0.494671
+[2024-11-15T22:08:23.248+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): process_data> dag:<DAG: stock_sentiment_testinggg> dagrun:<DagRun stock_sentiment_testinggg @ 2024-11-14 00:00:00+00:00: scheduled__2024-11-14T00:00:00+00:00, state:running, queued_at: 2024-11-15 22:03:04.489824+00:00. externally triggered: False>
+[2024-11-15T22:08:23.249+0000] {logging_mixin.py:190} INFO - Failure caused by 'NoneType' object is not subscriptable
+[2024-11-15T22:08:23.250+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=stock_sentiment_testinggg, task_id=process_data, run_id=scheduled__2024-11-14T00:00:00+00:00, execution_date=20241114T000000, start_date=20241115T220822, end_date=20241115T220823
+[2024-11-15T22:08:23.275+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-15T22:08:23.276+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 250 for task process_data ('NoneType' object is not subscriptable; 1596)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test.py", line 68, in process_data
+    df_stock = process_stock_data(data_stock)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test.py", line 81, in process_stock_data
+    df_stock = pd.DataFrame.from_dict(data_stock['Time Series (Daily)'], orient='index')
+                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+[2024-11-15T22:08:23.330+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-15T22:08:23.375+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-15T22:08:23.386+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-11-15T22:27:42.534+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-15T22:27:42.562+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stock_sentiment_testinggg.process_data scheduled__2024-11-14T00:00:00+00:00 [queued]>
+[2024-11-15T22:27:42.575+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stock_sentiment_testinggg.process_data scheduled__2024-11-14T00:00:00+00:00 [queued]>
+[2024-11-15T22:27:42.576+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-11-15T22:27:42.600+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_data> on 2024-11-14 00:00:00+00:00
+[2024-11-15T22:27:42.612+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1928) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-15T22:27:42.615+0000] {standard_task_runner.py:72} INFO - Started process 1936 to run task
+[2024-11-15T22:27:42.615+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'stock_sentiment_testinggg', 'process_data', 'scheduled__2024-11-14T00:00:00+00:00', '--job-id', '276', '--raw', '--subdir', 'DAGS_FOLDER/ETL_saham_test.py', '--cfg-path', '/tmp/tmpl9rsh6j9']
+[2024-11-15T22:27:42.617+0000] {standard_task_runner.py:105} INFO - Job 276: Subtask process_data
+[2024-11-15T22:27:42.702+0000] {task_command.py:467} INFO - Running <TaskInstance: stock_sentiment_testinggg.process_data scheduled__2024-11-14T00:00:00+00:00 [running]> on host 50375b572a3b
+[2024-11-15T22:27:42.821+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='stock_sentiment_testinggg' AIRFLOW_CTX_TASK_ID='process_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-14T00:00:00+00:00'
+[2024-11-15T22:27:42.823+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-15T22:27:42.825+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-15T22:27:42.826+0000] {logging_mixin.py:190} INFO - Current task name:process_data state:running start_date:2024-11-15 22:27:42.563138+00:00
+[2024-11-15T22:27:42.827+0000] {logging_mixin.py:190} INFO - Dag name:stock_sentiment_testinggg and current dag run status:running
+[2024-11-15T22:27:42.828+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-15T22:27:42.860+0000] {logging_mixin.py:190} INFO - Kunci 'Time Series (Daily)' tidak ditemukan dalam data JSON.
+[2024-11-15T22:27:43.770+0000] {log.py:232} WARNING - [nltk_data] Downloading package vader_lexicon to
+[nltk_data]     /home/***/nltk_data...
+[2024-11-15T22:27:43.788+0000] {log.py:232} WARNING - [nltk_data]   Package vader_lexicon is already up-to-date!
+[2024-11-15T22:27:43.876+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test.py", line 74, in process_data
+    final_df = transform(df_stock, df_news)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test.py", line 111, in transform
+    stock_df.columns = ['datetime', 'open', 'high', 'low', 'close', 'volume']
+    ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6218, in __setattr__
+    return object.__setattr__(self, name, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 767, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 227, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/internals/base.py", line 85, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 1 elements, new values have 6 elements
+[2024-11-15T22:27:43.909+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-11-15T22:27:43.911+0000] {logging_mixin.py:190} INFO - Task start:2024-11-15 22:27:42.563138+00:00 end:2024-11-15 22:27:43.908851+00:00 duration:1.345713
+[2024-11-15T22:27:43.912+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): process_data> dag:<DAG: stock_sentiment_testinggg> dagrun:<DagRun stock_sentiment_testinggg @ 2024-11-14 00:00:00+00:00: scheduled__2024-11-14T00:00:00+00:00, state:running, queued_at: 2024-11-15 22:22:25.099032+00:00. externally triggered: False>
+[2024-11-15T22:27:43.913+0000] {logging_mixin.py:190} INFO - Failure caused by Length mismatch: Expected axis has 1 elements, new values have 6 elements
+[2024-11-15T22:27:43.914+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=stock_sentiment_testinggg, task_id=process_data, run_id=scheduled__2024-11-14T00:00:00+00:00, execution_date=20241114T000000, start_date=20241115T222742, end_date=20241115T222743
+[2024-11-15T22:27:43.940+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-15T22:27:43.942+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 276 for task process_data (Length mismatch: Expected axis has 1 elements, new values have 6 elements; 1936)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test.py", line 74, in process_data
+    final_df = transform(df_stock, df_news)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/ETL_saham_test.py", line 111, in transform
+    stock_df.columns = ['datetime', 'open', 'high', 'low', 'close', 'volume']
+    ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6218, in __setattr__
+    return object.__setattr__(self, name, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 767, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 227, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/internals/base.py", line 85, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 1 elements, new values have 6 elements
+[2024-11-15T22:27:43.999+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-15T22:27:44.037+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-15T22:27:44.043+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
