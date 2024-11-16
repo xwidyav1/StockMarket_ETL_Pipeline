@@ -1,6 +1,7 @@
 # Python cache files
 __pycache__/
-
+*.py[cod]
+*$py.class
 
 # Environment files
 .env
@@ -12,14 +13,7 @@ env/
 logs/
 *.log
 
-# Temporary files
-tempCodeRunnerFile.py
-*.tmp
-*.temp
 
-# Test files (jika ini adalah file test sementara)
-test*.py
-tes*.py
 
 # IDE specific files
 .vscode/

@@ -17,7 +17,7 @@ def extract():
         raise ValueError("API key is not set properly in the .env file.")
     
     symbol = 'NVDA'  # Simbol saham NVIDIA
-    range_days = 5
+    range_days = 10
     upper_range = datetime.now().strftime('%Y-%m-%d')
     lower_range = (datetime.now() - timedelta(days=range_days)).strftime('%Y-%m-%d')  # Perluas rentang tanggal
     
@@ -36,7 +36,7 @@ def extract():
     news_data = []
     for i in range(range_days):
         date_str = (current_date - timedelta(days=i)).strftime('%Y-%m-%d')
-        url_news = f'https://api.polygon.io/v2/reference/news?ticker={symbol}&published_utc={date_str}&limit=10&apiKey={polygon_api_key}'
+        url_news = f'https://api.polygon.io/v2/reference/news?ticker={symbol}&published_utc={date_str}&limit=20&apiKey={polygon_api_key}'
         response_news = requests.get(url_news)
         data_news = response_news.json()
         if 'results' in data_news:

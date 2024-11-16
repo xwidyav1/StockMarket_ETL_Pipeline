@@ -6,16 +6,23 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
+import os
+from dotenv import load_dotenv
 
 def fetch_data():
+    load_dotenv()
     try:
         # Konfigurasi koneksi database
+        
+        #conn = psycopg2.connect('DATABASE_CONNECTION')
+
+    
         conn = psycopg2.connect(
-            host='pg-353b3b2c-etl-stock-sentiment-analysis.h.aivencloud.com',
-            port='20031',
+            host=os.getenv('HOST_DB'),
+            port=10158,
             database='stock_market_db',
             user='avnadmin',
-            password='AVNS_j2Ir2GgZqzJJ82yHL_s',
+            password=os.getenv('PW_DB'),
             sslmode='require'
         )
         
